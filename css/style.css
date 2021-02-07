@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'RockSalt';
+    src:url("../font/RockSalt-Regular.ttf") format("truetype");
+    src: local("") url("../font/GmarketSansTTFLight.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UhBee QUEEN J';
+    src:url("../font/UhBee QUEEN J.ttf") format("truetype");
+    src: local("") url("../font/UhBee QUEEN J.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UhBee QUEEN J700';
+    src:url("../font/UhBee QUEEN J Bold.ttf") format("truetype");
+    src: local("") url("../font/UhBee QUEEN J Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body,html{
+    height: 1020px;
+}
+div#index{
+    height: 100%;
+}
+div#index .index_inner{
+    height: 100%;
+}
+div#index .index_inner section h2{
+    width: 150px;
+    font-family: "RockSalt";
+    font-size: 36px;
+    margin:40px 45px;
+}
+
+
+/************/
+
+
+div#index .index_inner section{
+    float: left;
+    text-align: center;
+    transition: all 2s;
+}
+
+section#home{
+    width: 1323px;
+    height: 100%;
+    background-color:#7A95AD;
+
+}
+section#picture{
+    width: 1323px;
+    height: 100%;
+    background-color: #CECDCD;
+}
+
+
+
+/******    about      ******/
+
+section#about{
+    width: 1323px;
+    height: 100%; 
+    background-color: #748795;
+}
+.about_inner{
+    width: 950px;
+    height: 740px;
+    margin: 0 auto;
+}
+.aboutTop_inner .aboutTop_inner{
+    width: 100%;
+    height: 400px;
+}
+.aboutTop_inner ul{
+    width: 100%;
+    height: 400px;
+}
+.aboutTop_inner ul .leftImg{
+    width: 400px;
+    height: 100%;
+    float: left;
+}
+.aboutTop_inner ul .leftImg img{
+    width: 100%;
+}
+.aboutTop_inner ul .rightImg{
+    width: 490px;
+    height: 100%;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+.aboutTop_inner ul .rightImg ul li{
+    width: 230px;
+    height: 180px;
+    overflow: hidden;
+    float: left;
+    margin-left: 15px;
+}
+
+.aboutTop_inner ul .rightImg ul li img{
+    height: 100%;
+}
+.aboutTop_inner ul .rightImg ul p{
+    width: 480px;
+    font-family: 'UhBee QUEEN J';
+    font-size: 16px;
+    color: 000;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-align: left;
+}
+.about_inner .aboutBottom_inner{
+    width: 950px;
+    height: 210px;
+    overflow:auto;
+    margin-top: 80px;
+}
+.about_inner .aboutBottom_inner ul{
+    width: 100%;
+    height: 100%;
+}
+.about_inner .aboutBottom_inner ul li{
+    width: 195px;
+    height: 100%;
+    float: left;
+}
+.aboutBottom_inner ul li .list_img{
+    width: 150px;
+    height: 150px;
+
+}
+.aboutBottom_inner ul li .list_img a{
+    display: block;
+}
+.aboutBottom_inner ul li .list_img a img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/****    video     ****/
+
+section#video{
+    width: 1323px;
+    height: 100%;
+    background-color: #CAA8A8;
+}
+.video_inner{
+    width: 1060px;
+    height: 100%;
+    margin: 0 auto;
+}
+.video_inner .topimg{
+    width: 100%;
+    height: 222px;
+    background-image: url(../img/video.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: 0px -250px;
+    opacity: .5;
+}
+.story_video{
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+}
+.story_video dl{
+    width: 350px;
+    height: 335px;
+    float: left;
+}
+.story_video dl dd{
+    width: 350px;
+    text-align: left;
+    font-family: 'UhBee QUEEN J';
+}
+.story_video dl dd span{
+    font-weight: 700;
+    font-family: 'RockSalt';
+}
+
+.story_video .story_main{
+    width: 505px;
+    height:644px; 
+    margin-right: 80px;
+}
+.story_video .story_main .main_video{
+    width: 505px;
+    height: 400px;
+    background-color: #999;
+}
+.story_video .story_main .main_video a{
+    display: block;
+}
+.story_video .story_main >dd{
+    width: 505px;
+}
