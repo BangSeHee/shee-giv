@@ -28,60 +28,87 @@
 }
 
 body,html{
-    height: 1020px;
+    height: 100vh;
+    -ms-overflow-style: none;
 }
+::-webkit-scrollbar{ 
+    display: none; 
+}
+
 div#index{
-    height: 100%;
+    height: 100vh;
 }
 div#index .index_inner{
-    height: 100%;
+    width: 100vw;
+    height: 100vh; 
 }
 div#index .index_inner section h2{
     width: 150px;
     font-family: "RockSalt";
-    font-size: 36px;
-    margin:40px 45px;
+    font-size: 32px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
-
-/************/
-
-
-div#index .index_inner section{
-    float: left;
+div#index .index_inner section:nth-child(3) h2{
+    position: absolute;
+    left: 10px;
+}
+div#index .index_inner .section_wrap{
+    width: 10%;
+    height: 100%;
     text-align: center;
-    transition: all 2s;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
 }
-
-section#home{
-    width: 1323px;
+div.inner{
+    width: 1060px;
     height: 100%;
-    background-color:#7A95AD;
-
-}
-section#picture{
-    width: 1323px;
-    height: 100%;
-    background-color: #CECDCD;
+    margin: 150px auto;
+    display: none;
 }
 
+/*****         on         *****/
 
+div#index .index_inner .section_wrap.on{
+    width:70%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+div#index .index_inner .section_wrap.on .inner{
+    display: block;
+    transition-delay: 1s;
+}
+div#index .index_inner section.on h2{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    transform: translate(0, 0);
+    transition: all 0.5s;
+}
+div#index .index_inner section.on .outlogo{
+    display: none;
+}
 
 /******    about      ******/
 
 section#about{
-    width: 1323px;
-    height: 100%; 
-    background-color: #748795;
+    background-image: url(../img/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-.about_inner{
+
+.aboutTop_inner{
     width: 950px;
-    height: 740px;
-    margin: 0 auto;
-}
-.aboutTop_inner .aboutTop_inner{
-    width: 100%;
     height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 .aboutTop_inner ul{
     width: 100%;
@@ -123,88 +150,221 @@ section#about{
     left: 10px;
     text-align: left;
 }
-.about_inner .aboutBottom_inner{
-    width: 950px;
+.inner .aboutBottom_inner{
+    width: 900px;
     height: 210px;
-    overflow:auto;
-    margin-top: 80px;
+    overflow:hidden;
+    margin: 80px auto;
 }
-.about_inner .aboutBottom_inner ul{
-    width: 100%;
+.inner .aboutBottom_inner ul{
+    width: 2145px;
     height: 100%;
 }
-.about_inner .aboutBottom_inner ul li{
+.inner .aboutBottom_inner ul li{
     width: 195px;
     height: 100%;
     float: left;
 }
+.inner .aboutBottom_inner ul li h2{
+    
+}
 .aboutBottom_inner ul li .list_img{
     width: 150px;
     height: 150px;
-
+    margin: 0 auto;
+    border-radius: 50%;
+    
 }
 .aboutBottom_inner ul li .list_img a{
+    width: 100%;
+    height: 100%;
     display: block;
 }
-.aboutBottom_inner ul li .list_img a img{
-    width: 100%;
-    border-radius: 50%;
+
+.aboutBottom_inner ul li:nth-child(1) .list_img{
+    background-image: url(../img/cb_outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.aboutBottom_inner ul li:nth-child(2) .list_img{
+    background-image: url(../img/sn-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(3) .list_img{
+    background-image: url(../img/wo-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(4) .list_img{
+    background-image: url(../img/lu-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(5) .list_img{
+    background-image: url(../img/li-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(6) .list_img{
+    background-image: url(../img/sa-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(7) .list_img{
+    background-image: url(../img/sc-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(8) .list_img{
+    background-image: url(../img/ot-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(9) .list_img{
+    background-image: url(../img/fk-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(10) .list_img{
+    background-image: url(../img/pp-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.aboutBottom_inner ul li:nth-child(11) .list_img{
+    background-image: url(../img/ma-outline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.aboutBottom_inner ul li:nth-child(1) .list_img:hover{
+    background-image: url(../img/cb-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(2) .list_img:hover{
+    background-image: url(../img/sn-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(3) .list_img:hover{
+    background-image: url(../img/wo-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(4) .list_img:hover{
+    background-image: url(../img/lu-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(5) .list_img:hover{
+    background-image: url(../img/li-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(6) .list_img:hover{
+    background-image: url(../img/sa-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(7) .list_img:hover{
+    background-image: url(../img/sc-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(8) .list_img:hover{
+    background-image: url(../img/ot-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(9) .list_img:hover{
+    background-image: url(../img/fk-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(10) .list_img:hover{
+    background-image: url(../img/pp-color.jpg);
+}
+.aboutBottom_inner ul li:nth-child(11) .list_img:hover{
+    background-image: url(../img/ma-color.jpg);
+}
+
 
 /****    video     ****/
 
 section#video{
-    width: 1323px;
-    height: 100%;
     background-color: #CAA8A8;
+    height: auto;
 }
-.video_inner{
-    width: 1060px;
-    height: 100%;
-    margin: 0 auto;
+section#video .storySlide{
+    overflow-y: scroll;
 }
-.video_inner .topimg{
+
+.inner .topimg{
     width: 100%;
     height: 222px;
     background-image: url(../img/video.jpg);
     background-repeat:no-repeat;
     background-size: 100%;
     background-position: 0px -250px;
-    opacity: .5;
+    opacity: 0.5;
 }
+
 .story_video{
     width: 100%;
-    height: 1000px;
-    margin: 0 auto;
+    height: 100%;
+    margin: 80px auto;
 }
-.story_video dl{
-    width: 350px;
-    height: 335px;
-    float: left;
+.story_video .story_main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: nowrap;
 }
-.story_video dl dd{
-    width: 350px;
+.story_video .story_main li{
+    width: 530px;
+    height: 100%;    
+}
+
+.story_video .story_main li .ar{
+    width: 510px;
+    height: 80px;
     text-align: left;
     font-family: 'UhBee QUEEN J';
 }
-.story_video dl dd span{
-    font-weight: 700;
+.story_video .story_main li .ar h3{
     font-family: 'RockSalt';
+    font-weight: 700;
+    margin-top: 10px;
 }
-
-.story_video .story_main{
-    width: 505px;
-    height:644px; 
-    margin-right: 80px;
+.story_video .story_main li .sub_ar{
+    width: 340px;
+    height: 40px;
 }
-.story_video .story_main .main_video{
-    width: 505px;
+.story_main .mainStory{
+    width: 510px;
+    height: 100%;
+}
+.story_main .mainStory .main_video{
+    width: 510px;
     height: 400px;
     background-color: #999;
 }
-.story_video .story_main .main_video a{
+.story_main .mainStory .main_video a{
+    width: 100%;
     display: block;
 }
-.story_video .story_main >dd{
-    width: 505px;
+.story_main .subStory{
+    width: 550px;
+    height: 100%;
 }
+.story_main .subStory .main_video{
+    width: 340px;
+    height: 250px;
+    background-color: #999;
+}
+
+
+/*******      picture      ******/
+
+section#picture{
+    background-color: #CECDCD;
+}
+
+/****         home         *****/
+section#home{
+    background-color:#7A95AD;
+
+}
+
+
+
+
+@media screen and (width:1060px){
+    width:100%;
+}
+
